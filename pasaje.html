@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="stylePasaje.css">
+  <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvd1T1LHFEYxfHfFhY2FhJfECxMo2AlCDYiFokBP4JYpwuKr4W9KCiKRT6DRQpb80IIItiIjYiVlqIWgo2Fhe5ddmF2nM3cQbdxuss85/zvc+5zZ0qa/JSa7O/9Ar5gGaNoyYnxEQdYw690bVZEvThFW8HzuccArpK6LMA2ZrCHqXInDzmgVvzAJLYwlwcIO+iuxnMY2cUY/lV33/M/wAiOcF2FRPpXpjFsrAvDOK4J0xGtYwmbWIh1r9bt4BtWsZIFGMJPfChonC6/RZjCk/Ai2cE5+l9pXpOfYTANeHoj87p0kh3UAGHUNrCI2UhoGO1wbvMJTcU7C9Bevgd36MBNJKATIfukpiHga/lG7mIa3yMBWZqGgEjP3LIXgAv05criCi7xMX0GE9iP0+dWfcKfNCCsk6Na9GeUqU2bNB3wF+PlL+lvfM4Nor4gU1s0hoLM+otWWBwjeAZ3iToZKPNZBgAAAABJRU5ErkJggg==">
+    <!---NavBar font--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!---Boxicons--->
+       <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
+</head>
+
+<body>
+
+    <!--- Header--->
+    <header>
+        <a href="index.html" class="logo" data-aos="fade-in" 
+        data-aos-duration="1400" data-aos-delay="550">
+            <img src="logo.png" alt="logo con tres vehiculos">
+        </a>
+
+        <!--- Navigation bar--->
+        <ul class = "nav-bar">
+            <li><a href="index.html"data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="600">Inicio</a></li>
+            <li><a href="rutas.html"data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="700">Rutas</a></li>
+            <li><a href="pasaje.html"data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="800">Pasaje</a></li>
+        </ul>
+
+        <!--- Menu icon--->
+        <div class="explore" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="950">
+            <a href="#" class="nav-btn">Explorar</a>
+        </div>
+
+        <div class="bx bx-menu" id="menu-icon" data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="600"></div>
+    </header>
+
+    <!--- Main content--->
+    <main class="card">
+        <!--Buses-->
+        <article class="card_content">
+            <div class="card_logo">
+                <img src="BusLogo.png" height="50px" width="50px" alt="Bus de transporte publico">
+            </div>
+            <div class="card_price-box">
+                <h3 class="card_title">Pasaje en Bus</h3>
+                <p class="card_price">50<sup>bs</sup></p>
+                <p class="card_price-description">Pasaje Estándar para Pasajeros Casuales</p>
+                <p class="card_price">30<sup>bs</sup></p>
+                <p class="card_price-description">Pasaje para Pasajeros Estudiantiles</p>
+            </div>
+            <div class="card_button"><a href="rutas.html">Revisar Rutas </a><i class='bx bx-chevron-right'></i></div>
+        </article>
+        
+        <!--Carrito-->
+        <article class="card_content">
+            <div class="card_logo">
+                <img src="CarroLogo.png" height="50px" width="50px" alt="Carro de transporte publico">
+            </div>
+            <div class="card_price-box">
+                <h3 class="card_title">Pasaje en Carrito</h3>
+                <p class="card_price">50<sup>bs</sup></p>
+                <p class="card_price-description">Pasaje Corto para Pasajeros Casuales</p>
+                <p class="card_price">70<sup>bs</sup></p>
+                <p class="card_price-description">Pasaje Largo para Pasajeros Casuales</p>
+            </div>
+            <div class="card_button"><a href="rutas.html">Revisar Rutas </a><i class='bx bx-chevron-right'></i></div>
+        </article>
+
+        <!--Vans-->
+        <article class="card_content">
+            <div class="card_logo">
+                <img src="VanLogo.png" height="50px" width="50px" alt="Van de transporte publico">
+            </div>
+            <div class="card_price-box">
+                <h3 class="card_title">Pasaje en Van</h3>
+                <p class="card_price">40<sup>bs</sup></p>
+                <p class="card_price-description">Pasaje Estándar para Pasajeros Casuales</p>
+                <p class="card_price">50<sup>bs</sup></p>
+                <p class="card_price-description">Pasaje Largo para Pasajeros Casuales</p>
+            </div>
+            <div class="card_button"><a href="rutas.html">Revisar Rutas </a><i class='bx bx-chevron-right'></i></div>
+        </article>
+    </main>
+
+    <script>
+      let menu = document.querySelector("#menu-icon");
+      let navlist = document.querySelector(".nav-bar");
+
+      menu.onclick = () => {
+        menu.classList.toggle("bx-x");
+        navlist.classList.toggle("active");
+      };
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vianova</title>
+    <meta name="description" content="Vianova - Tu mejor opción para moverte por la ciudad.">
+    <meta name="keywords" content="transporte, rutas, pasaje, paradas, carros por puesto, vans, buses">
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvd1T1LHFEYxfHfFhY2FhJfECxMo2AlCDYiFokBP4JYpwuKr4W9KCiKRT6DRQpb80IIItiIjYiVlqIWgo2Fhe5ddmF2nM3cQbdxuss85/zvc+5zZ0qa/JSa7O/9Ar5gGaNoyYnxEQdYw690bVZEvThFW8HzuccArpK6LMA2ZrCHqXInDzmgVvzAJLYwlwcIO+iuxnMY2cUY/lV33/M/wAiOcF2FRPpXpjFsrAvDOK4J0xGtYwmbWIh1r9bt4BtWsZIFGMJPfChonC6/RZjCk/Ai2cE5+l9pXpOfYTANeHoj87p0kh3UAGHUNrCI2UhoGO1wbvMJTcU7C9Bevgd36MBNJKATIfukpiHga/lG7mIa3yMBWZqGgEjP3LIXgAv05criCi7xMX0GE9iP0+dWfcKfNCCsk6Na9GeUqU2bNB3wF+PlL+lvfM4Nor4gU1s0hoLM+otWWBwjeAZ3iToZKPNZBgAAAABJRU5ErkJggg==">
+    <link rel="stylesheet" href="style.css">
+
+    <!--box icon-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
+
+     <!--remix icon--> 
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap" rel="stylesheet">
+  
+    <!---NavBar font--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+    <!---Animaciones--->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+    <!--- Header--->
+    <header>
+        <a href="index.html" class="logo" data-aos="fade-in" 
+        data-aos-duration="1400" data-aos-delay="550">
+            <img src="logo.png" alt="logo con tres vehiculos">
+        </a>
+
+        <!--- Navigation bar--->
+        <ul class = "nav-bar">
+            <li><a href="index.html"data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="600">Inicio</a></li>
+            <li><a href="rutas.html"data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="700">Rutas</a></li>
+            <li><a href="pasaje.html"data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="800">Pasaje</a></li>
+        </ul>
+
+        <!--- Menu icon--->
+        <div class="explore" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="950">
+            <a href="troll.html" class="nav-btn">Explorar</a>
+        </div>
+
+        <div class="bx bx-menu" id="menu-icon" data-aos="fade-in" 
+                data-aos-duration="1400" data-aos-delay="600"></div>
+    </header>
+
+
+    <!--- Hero zone--->
+    <section class="hero">
+        <div class="hero-text">
+            <h1 data-aos="zoom-in-left" data-aos-duration="1400" 
+            data-aos-delay="200"> Vianova</h1>
+            <p data-aos="fade-right" data-aos-duration="1400" 
+            data-aos-delay="300">Vianova es tu compa para moverte fácil y sin líos en el transporte público de Maracaibo y San Francisco. 
+            <br>Solo pon de dónde sales y a dónde vas, y te mostramos las mejores rutas, paradas y puntos clave para que no te pierdas ni un paso.</p>
+        </div>
+
+    <!--- middle image--->
+        <div class="hero-img" data-aos="zoom-in" 
+        data-aos-duration="1400">
+            <img src="enupi.png" alt="imagen de un bus">
+        </div>
+ 
+    </section>
+
+        <!--- map Section--->
+    <section class="mapa-section">
+        <div id="ruteador">
+            <h2>Ubica una Ruta</h2> 
+            <input type="text" id="ruta" placeholder="Ej: coromoto" />
+            <button onclick="mostrarRuta()">Buscar</button>
+            <p id="infoRuta"></p>
+        </div>
+        <div id="map"></div>
+    </section>
+
+
+            <!---Segunda Sección de Información--->
+    <section>
+      <div class="vehiculos">
+        <!--- Info Section de Carros por puesto--->
+        <div class="contenedor">
+            <div class="glass">
+                <div class="cabecera">
+                    <h2>Carros por Puesto</h2>
+                    <img src="carros.png" alt="carros por puesto" data-aos="fade-up">
+                    <p>Rutas cortas y largas, además, económicas con carritos por puesto que te llevan rápido y fácil por San Francisco y Maracaibo.</p>
+                      <a href="pasaje.html" class="btn" data-aos="flip-up" 
+                data-aos-duration="1400">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+    <!--- Info Section de vanes--->
+    <div class="contenedor2">
+        <div class="glass2">
+            <div class="cabecera2">
+                <h2>Vanes</h2>
+                <img src="vans.png" alt="Vanes por puesto" data-aos="fade-up">
+                <p>Vans espaciosas y accesibles que conectan distintos puntos de la ciudad para que te muevas cómodo y sin estrés.</p>
+                    <a href="pasaje.html" class="btn" data-aos="flip-up" 
+                data-aos-duration="1400">Ver más</a>
+            </div>
+        </div>
+    </div>
+
+    <!--- Info Section de Buses--->
+        <div class="contenedor3">
+            <div class="glass3">
+                <div class="cabecera3">
+                    <h2>Buses</h2>
+                    <img src="Bus-Maracaibo.png" alt="Autobuses de Maracaibo" data-aos="fade-up">
+                    <p>Buses confiables con rutas amplias, ideales para trasladarte por toda la gran ciudad de forma segura y a buen precio.</p>
+                        <a href="pasaje.html" class="btn" data-aos="flip-up" 
+                data-aos-duration="1400">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+
+    <!--- Footer--->
+    <footer>
+        <div class="footer-content" data-aos="fade-up" 
+                data-aos-duration="1400" data-aos-delay="300">
+            <h3>Vianova</h3>
+            <p>Tu mejor opción para moverte por la ciudad.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vianova. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!--- JavaScript Link--->
+    <script src="script.js"></script>
+
+    <!---Animacion de elementos--->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 1,
+    });
+  </script>
+</body>
+</html>
